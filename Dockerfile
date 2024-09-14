@@ -2,7 +2,7 @@ FROM python:3.9-slim
 
 
 #Install flask 
-RUN pip install --upgrade pip && pip3 install flask 
+RUN pip install --upgrade pip && pip3 install flask mysql-connector-python 
 
 # workdir 
 WORKDIR /app
