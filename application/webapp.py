@@ -28,7 +28,7 @@ def clients():
     cursor.close()
     conn.close()
 
-    return render_template('index.html', rows=rows, column_names=column_names)
+    return render_template('clients.html', rows=rows, column_names=column_names)
      
 
 if __name__ == "__main__": 
