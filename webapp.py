@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 db_config = {
     'user': os.environ['DBUSER'],
-    'password': os.environ['DBPASSWORD']
+    'password': os.environ['DBPASSWORD'], 
     'host': os.environ['DBHOST'],
     'database': os.environ['DB']
 }
