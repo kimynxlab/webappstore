@@ -1,8 +1,7 @@
 from flask import Flask , render_template 
 import mysql.connector 
-import 
 import os 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 
 db_config = {
