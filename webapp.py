@@ -4,9 +4,7 @@ import os
 app = Flask(__name__)
 
 
-@app.route('/client')
-def connexion() 
-   db_config = {
+db_config = {
     'user': os.environ['DBUSER'],
     'password': os.environ['DBPASSWORD']
     'host': os.environ['DBHOST'],
