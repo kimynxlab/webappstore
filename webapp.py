@@ -12,8 +12,8 @@ db_config = {
 }
 
 @app.route('/')
-def hello_world():
-    return 'Hello world' 
+def index():
+    return render_template('index.html')
 
 @app.route('/clients')
 def clients():
