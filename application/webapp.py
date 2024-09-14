@@ -6,9 +6,11 @@ app = Flask(__name__, template_folder='.')
 
 db_config = {
     'user': os.environ['DBUSER'],
-    'password': os.environ['DBPASSWORD'], 
+    'password': os.environ['DBPASSWORD'],
     'host': os.environ['DBHOST'],
-    'database': os.environ['DB']
+    'database': os.environ['DB'], 
+    'charset': 'utf8mb4',
+    'collation': 'utf8mb4_unicode_ci'
 }
 
 @app.route('/')
@@ -18,6 +20,7 @@ def index():
 @app.route('/clients')
 def clients():
     conn = mysql.connector.connect(**db_config)
+    conn.set_charset_collation('utf8mb4', 'utf8mb4_unicode_ci')
     cursor = conn.cursor()
 
     cursor.execute("SELECT * FROM client")
