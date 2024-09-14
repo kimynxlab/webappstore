@@ -8,7 +8,7 @@ RUN pip install --upgrade pip && pip3 install flask mysql-connector-python
 WORKDIR /app
 
 # Add ower application to the workdir 
-COPY webapp.py . 
+COPY  application/* . 
 
 # Configure the application 
 ENV FLASK_APP=/app/webapp.py 
