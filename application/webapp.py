@@ -30,6 +30,8 @@ def clients():
 
     return render_template('clients.html', rows=rows, column_names=column_names)
      
+@app.route('/register')
+    return "Under construction"
 
 if __name__ == "__main__": 
     app.run() 
